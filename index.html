@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Stats preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --very-dark-blue: hsl(233, 47%, 7%);
+        --dark-desatured-blue: hsl(244, 38%, 16%);
+        --soft-violet: hsl(277, 64%, 61%);
+        --clr-primary: hsl(0, 0%, 100%);
+        --clr-secondary: hsla(0, 0%, 100%, 0.75);
+        --clr-sub: hsla(0, 0%, 100%, 0.6);
+        --ff-1: "Inter", sans-serif;
+        --ff-2: "Lexend Deca", sans-serif;
+        --f-light: 400;
+        --f-bold: 700;
+        --f-size: 15;
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: var(--very-dark-blue);
+        padding: 1rem;
+      }
+      picture {
+        background: darkviolet;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.65;
+      }
+      .main {
+        background-color: var(--dark-desatured-blue);
+        border-radius: 0.5rem;
+        color: var(--clr-primary);
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--ff-1);
+        overflow: hidden;
+        max-width: 500px;
+      }
+      .content {
+        padding: 30px;
+        display: grid;
+        gap: 1rem;
+      }
+      .special {
+        color: var(--soft-violet);
+      }
+      .title {
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: var(--ff-2);
+      }
+      .description {
+        text-align: center;
+        font-family: var(--ff-2);
+        color: var(--clr-secondary);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1.5rem;
+      }
+      .col-3 {
+        display: flex;
+        font-family: var(--ff-2);
+        flex-direction: column;
+        align-items: center;
+        color: var(--clr-sub);
+        gap: 0.4rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+      .col-3 > span {
+        font-size: 1.4rem;
+        font-family: var(--ff-1);
+        font-weight: var(--f-bold);
+        color: var(--clr-primary);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media (min-width: 750px) {
+        .main {
+          flex-direction: row-reverse;
+          max-width: 932px;
+        }
+        .title {
+          font-size: 2.2rem;
+        }
+        .title,
+        .description,
+        .grid-col {
+          text-align: left;
+        }
+        .content {
+          width: 50%;
+          padding: 50px 60px 40px 40px;
+        }
+        .description {
+          font-size: 0.85rem;
+        }
+        .flex-col {
+          flex-direction: row;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        img {
+          height: 100%;
+        }
+        picture {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <picture>
+        <source
+          src="images/image-header-desktop.jpg"
+          media="(min-width:600px)"
+        />
+        <img src="images/image-header-mobile.jpg" alt="simple image" />
+      </picture>
+      <article class="content">
+        <h1 class="title">
+          Get
+          <span class="special">insights</span> that help your business grow.
+        </h1>
+        <p class="description">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="flex-col">
+          <div class="col-3">
+            <span style="text-transform: lowercase">10k+</span>companies
+          </div>
+          <div class="col-3"><span>314 </span>templates</div>
+          <div class="col-3"><span>12m+</span>queries</div>
+        </div>
+      </article>
+    </main>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
